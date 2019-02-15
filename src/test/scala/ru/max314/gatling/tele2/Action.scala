@@ -22,8 +22,10 @@ object Action {
   val root_3_1: ChainBuilder = exec(
     http("root_3_1")
       .get("/")
-      .check(status.is(200))
   )
+
+  val a_root = http("root")
+    .get("/")
 
   /**
     * Перейти в каталог тарифов - https://msk.tele2.ru/tariffs
@@ -31,8 +33,10 @@ object Action {
   val tarrif_3_2: ChainBuilder = exec(
     http("tarrif_3_2")
       .get("/tariffs")
-      .check(status.is(200))
   )
+
+  val a_tarif = http("tarif")
+    .get("/")
 
   /***
     * Открыть любую карточку тарифа (например https://msk.tele2.ru/tariff/my-tele2)
@@ -40,7 +44,6 @@ object Action {
   val card_3_3: ChainBuilder = exec(
     http("card_3_3")
       .get("/tariff/my-tele2")
-      .check(status.is(200))
   )
 
   /**
@@ -49,7 +52,6 @@ object Action {
   val roaming_3_4: ChainBuilder = exec(
     http("roaming_3_4")
       .get("/mobile/roaming")
-      .check(status.is(200))
   )
 
 
