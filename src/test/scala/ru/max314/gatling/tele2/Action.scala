@@ -24,9 +24,6 @@ object Action {
       .get("/")
   )
 
-  val a_root = http("root")
-    .get("/")
-
   /**
     * Перейти в каталог тарифов - https://msk.tele2.ru/tariffs
     */
@@ -34,10 +31,6 @@ object Action {
     http("tarrif_3_2")
       .get("/tariffs")
   )
-
-  val a_tarif = http("tarif")
-    .get("/")
-
   /***
     * Открыть любую карточку тарифа (например https://msk.tele2.ru/tariff/my-tele2)
     */
